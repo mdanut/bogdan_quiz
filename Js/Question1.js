@@ -1,5 +1,6 @@
 var nrIntrebari=10;
 
+/*----------------------------REDENUMESTE FISIERUL--------------------------------*/
 $(document).ready(function(){
     	var i=getCookie(' intrebareCurenta');
     	i=parseInt(i);
@@ -45,6 +46,7 @@ $(document).ready(function(){
 			location.href='Rezultat.html';
    		})
    		
+		/*----------------------------FOLOSESTE DOAR O FUNCTIE DE CLICK PENTRU TOATE CELE 5 BUTOANE RADIO--------------------------------*/
         $('input:radio#a').click(function(){
     		checkRadio(0);
     	})
@@ -65,6 +67,7 @@ $(document).ready(function(){
     	   checkRadio(4);
     	})
     	
+		/*----------------------------FOLOSESTE DOAR O FUNCTIE DE CLICK PENTRU TOATE CELE 5 BUTOANE CHECK BOX--------------------------------*/
         $('input:checkbox#a').click(function(){
     		checkCheckBox(0);
     	})

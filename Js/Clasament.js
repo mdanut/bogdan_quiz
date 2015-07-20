@@ -1,3 +1,4 @@
+/*---------------COMENTARIILE, NUMELE VARIABILELOR SI A FUNCTIILOR SA LE PUI IN LIMBA ENGLEZA-------------------------*/
 //variabile globale
 var nume;
 var prenume;
@@ -5,11 +6,13 @@ var puncte;
 var nr;
 
 //matrice utilizatori
+/*---------------POTI FOLOSI O FUNCTIE DE INITIALIZARE, IN CARE SA PUI ACEST FOR-------------------------*/
 var dateUtilizator = new Array(10);
 for (var j = 0; j < dateUtilizator.length; j++) {
 	dateUtilizator[j] = new Array(3);
 }
 
+/*---------------IN FUNCTIA READY AR TREBUI SA INCLUZI TOATE CELELALTE FUNCTII DIN FISIER, PENTRU CA ACESTEA SA SE EXECUTE DOAR DUPA CE SE INCARCA PAGINA HTML-------------------------*/
 $(document).ready(function(){
 	adugareUtilizatorInMatrice();
 	afisareRezultat();
@@ -23,7 +26,7 @@ function afisareRezultat(){
 	var list = $('<ol>');
 	var item;
 	var text = '';
-	nr=getCookie(' indexUtilizator');
+	nr=getCookie(' indexUtilizator'); /*----------------------REDENUMESTE FUNCTIA IN getCookieValueByKey-------------------------------*/
 	
 	for (var i = 0; i <= nr ; i++){
     	item = $('<li>');
@@ -39,7 +42,7 @@ function afisareRezultat(){
  }
 
 function adugareUtilizatorInMatrice(){
-	nume =getCookie(' firstName');
+	nume =getCookie(' firstName'); /*----------------------NU LASA SPATIU INAINTE DE firstName-------------------------------*/
 	prenume = getCookie(' lastName');
 	puncte = sumaPunctaj();
 	
@@ -62,7 +65,7 @@ function adugareUtilizatorInMatrice(){
 		setCookie('matriceUtilixatori',dateUtilizator);
 	} 
 }
-
+/*----------------------PREA MULTE SPATII LIBERE-------------------------------*/
 
 function preluareMatriceUtilizatori(){
 	var date=getCookie(' matriceUtilixatori');

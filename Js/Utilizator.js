@@ -3,6 +3,7 @@ var firstName;
 var lastName;
 var i;
 
+/*---------------IN FUNCTIA READY AR TREBUI SA INCLUZI TOATE CELELALTE FUNCTII DIN FISIER, PENTRU CA ACESTEA SA SE EXECUTE DOAR DUPA CE SE INCARCA PAGINA HTML-------------------------*/
 $(document).ready(function(){
     $("button").click(function(){
     	resetCookie();
@@ -28,7 +29,7 @@ function salvareIndexUtilizator(){
 		i++;
 		setCookie('indexUtilizator',i);
 	}
-}
+} /*---------------LASA UN RAND LIBER-------------------------*/
 function resetCookie(){
 	setCookie('min','15');
 	setCookie('sec','0');

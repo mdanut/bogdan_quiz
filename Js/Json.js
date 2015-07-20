@@ -13,7 +13,7 @@ var text = '{"Questions":[' +
 obj=JSON.parse(text);
 
 function getQuestionAndAnswers(i){
-	var j=parseInt(i);
+	var j=parseInt(i); /*---------------------LASA UN RAND LIBER------------------------------*/
 	$("label#intr").html(obj.Questions[j].Intrebare);
 	$("label#varianta1").html(obj.Questions[j].var1);
 	$("label#varianta2").html(obj.Questions[j].var2);
