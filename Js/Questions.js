@@ -1,25 +1,24 @@
 var nrIntrebari=10;
 
-/*----------------------------REDENUMESTE FISIERUL--------------------------------*/
 $(document).ready(function(){
-    	var i=getCookie(' intrebareCurenta');
+    	var i=getCookieValueByKey(' intrebareCurenta');
     	i=parseInt(i);
     	
-        countdown(getCookie('min'),getCookie(' sec'));
+        countdown(getCookieValueByKey('min'),getCookieValueByKey(' sec'));
     	getQuestionAndAnswers(i-1);
     	
-        if(getCookie(' rez'+i.toString()) == undefined){
-    		setCookie('rez'+i.toString(),'0,0,0,0,0');
+        if(getCookieValueByKey(' rez'+i.toString()) == undefined){
+    		setCookieValue('rez'+i.toString(),'0,0,0,0,0');
     	} 
-   		reCheck(getCookie(' rez'+i.toString()));
+   		reCheck(getCookieValueByKey(' rez'+i.toString()));
    		
         $("button#prev").click(function(){
 			if(i>1){
-				setCookie('min',getMinutes());
-				setCookie('sec',getSeconds());
-				setCookie('rez'+i.toString(),getRez());
+				setCookieValue('min',getMinutes());
+				setCookieValue('sec',getSeconds());
+				setCookieValue('rez'+i.toString(),getRez());
 				i--;
-				setCookie('intrebareCurenta',i);
+				setCookieValue('intrebareCurenta',i);
 				location.href='Intrebarea'+(i).toString()+'.html'
 			}else{
 				alert("Aceasta este prima intrebare");
@@ -27,13 +26,13 @@ $(document).ready(function(){
    		})
     	
         $("button#next").click(function(){
-			setCookie('min',getMinutes());
-			setCookie('sec',getSeconds());
-			setCookie('rez'+i.toString(),getRez());
+			setCookieValue('min',getMinutes());
+			setCookieValue('sec',getSeconds());
+			setCookieValue('rez'+i.toString(),getRez());
 			
             if (i<10){
 				i++;
-				setCookie('intrebareCurenta',i)
+				setCookieValue('intrebareCurenta',i)
 				location.href='Intrebarea'+(i).toString()+'.html';
 			}
             else{
@@ -42,7 +41,7 @@ $(document).ready(function(){
    		})
     	
         $("button#final").click(function(){
-            setCookie('rez'+i.toString(),getRez());
+            setCookieValue('rez'+i.toString(),getRez());
 			location.href='Rezultat.html';
    		})
    		
