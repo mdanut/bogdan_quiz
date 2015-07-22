@@ -3,7 +3,7 @@ var firstName;
 var lastName;
 var i;
 
-/*---------------IN FUNCTIA READY AR TREBUI SA INCLUZI TOATE CELELALTE FUNCTII DIN FISIER, PENTRU CA ACESTEA SA SE EXECUTE DOAR DUPA CE SE INCARCA PAGINA HTML-------------------------*/
+
 $(document).ready(function(){
     $("button").click(function(){
     	resetCookie();
@@ -14,29 +14,31 @@ $(document).ready(function(){
 });
 
 function salveazaUtilizator(){
-	firstName = $("input#nume").val();
-	lastName = $("input#prenume").val();
-	setCookie('firstName',firstName);
-	setCookie('lastName',lastName);
+	firstName = $("input#firstname").val();
+	lastName = $("input#lastname").val();
+	setCookieValue('firstName',firstName);
+	setCookieValue('lastName',lastName);
 }
 
 function salvareIndexUtilizator(){
-	i = getCookie(' indexUtilizator');
+	i = getCookieValueByKey(' indexUtilizator');
 	if (i == undefined){
 		i=0;
-		setCookie('indexUtilizator',i);
+		setCookieValue('indexUtilizator',i);
 	}else{
 		i++;
-		setCookie('indexUtilizator',i);
+		setCookieValue('indexUtilizator',i);
 	}
-} /*---------------LASA UN RAND LIBER-------------------------*/
+}
+
+
 function resetCookie(){
-	setCookie('min','15');
-	setCookie('sec','0');
-	setCookie('Total','0');
-	setCookie('intrebareCurenta','1');
+	setCookieValue('min','15');
+	setCookieValue('sec','0');
+	setCookieValue('Total','0');
+	setCookieValue('intrebareCurenta','1');
 	for (var i = 1; i <= 10; i++) {
-		setCookie('rez'+i.toString(),'0,0,0,0,0');
+		setCookieValue('rez'+i.toString(),'0,0,0,0,0');
 	}
 	
 }
