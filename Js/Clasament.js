@@ -1,32 +1,36 @@
-/*---------------COMENTARIILE, NUMELE VARIABILELOR SI A FUNCTIILOR SA LE PUI IN LIMBA ENGLEZA-------------------------*/
-//variabile globale
+//GLOBAL VARIABLES
 var nume;
 var prenume;
 var puncte;
 var nr;
+var dateUtilizator;
 
-//matrice utilizatori
-/*---------------POTI FOLOSI O FUNCTIE DE INITIALIZARE, IN CARE SA PUI ACEST FOR-------------------------*/
-var dateUtilizator = new Array(10);
-for (var j = 0; j < dateUtilizator.length; j++) {
-	dateUtilizator[j] = new Array(3);
-}
-
-/*---------------IN FUNCTIA READY AR TREBUI SA INCLUZI TOATE CELELALTE FUNCTII DIN FISIER, PENTRU CA ACESTEA SA SE EXECUTE DOAR DUPA CE SE INCARCA PAGINA HTML-------------------------*/
 $(document).ready(function(){
+	initializeUserMatrix();
 	adugareUtilizatorInMatrice();
 	afisareRezultat();
     $("button#final").click(function(){
+		resetCookie();
 		location.href='../Main.html'
     });
 });
 
-//functia de afisare
+//INITIALIZE USERS MATRIX
+function initializeUserMatrix(){
+	nr=getCookieValueByKey('indexUtilizator');
+	nr=parseInt(nr);
+	dateUtilizator = new Array(nr+1);
+	for (var j = 0; j < dateUtilizator.length; j++) {
+		dateUtilizator[j] = new Array(3);
+	}
+}
+
+//DISPLAY FUNCTION
 function afisareRezultat(){
 	var list = $('<ol>');
 	var item;
 	var text = '';
-	nr=getCookie(' indexUtilizator'); /*----------------------REDENUMESTE FUNCTIA IN getCookieValueByKey-------------------------------*/
+	nr=getCookieValueByKey('indexUtilizator'); 
 	
 	for (var i = 0; i <= nr ; i++){
     	item = $('<li>');
@@ -42,35 +46,34 @@ function afisareRezultat(){
  }
 
 function adugareUtilizatorInMatrice(){
-	nume =getCookie(' firstName'); /*----------------------NU LASA SPATIU INAINTE DE firstName-------------------------------*/
-	prenume = getCookie(' lastName');
+	nume =getCookieValueByKey('firstName');
+	prenume = getCookieValueByKey('lastName');
 	puncte = sumaPunctaj();
 	
 	if (puncte < 0){
 		puncte=0;
 	}
-	nr=getCookie(' indexUtilizator');
+	nr=getCookieValueByKey('indexUtilizator');
 	nr=parseInt(nr);
 	
 	if (nr == 0){
 		dateUtilizator[nr][0]=nume;
 		dateUtilizator[nr][1]=prenume;
 		dateUtilizator[nr][2]=puncte;
-		setCookie('matriceUtilixatori',dateUtilizator);
+		setCookieValue('matriceUtilixatori',dateUtilizator);
 	}else{
 		preluareMatriceUtilizatori();
 		dateUtilizator[nr][0]=nume;
 		dateUtilizator[nr][1]=prenume;
 		dateUtilizator[nr][2]=puncte;
-		setCookie('matriceUtilixatori',dateUtilizator);
+		setCookieValue('matriceUtilixatori',dateUtilizator);
 	} 
 }
-/*----------------------PREA MULTE SPATII LIBERE-------------------------------*/
 
 function preluareMatriceUtilizatori(){
-	var date=getCookie(' matriceUtilixatori');
+	var date=getCookieValueByKey('matriceUtilixatori');
 	var j=0;
-	nr=getCookie(' indexUtilizator');
+	nr=getCookieValueByKey('indexUtilizator');
 	nr=parseInt(nr);
 	date = date.split(',');
 	
@@ -82,3 +85,12 @@ function preluareMatriceUtilizatori(){
 	}
 }
 
+function resetCookie(){
+	setCookieValue('min','15');
+	setCookieValue('sec','0');
+	setCookieValue('Total','0');
+	setCookieValue('intrebareCurenta','1');
+	for (var i = 1; i <= 10; i++) {
+		setCookieValue('rez'+i.toString(),'0,0,0,0,0');
+	}
+}

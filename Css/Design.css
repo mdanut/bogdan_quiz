@@ -32,14 +32,14 @@ h3 {
 	width: 900px;
 	background-color: #FFFFE9;
 }
-#intr{
+#question-label{
 	font-family: "Times New Roman";
 	font-weight: bold;
 	font-size: 30px;
 	margin-top: 40px;
 	margin-left: 10px;
 }
-#intrebare{
+#question{
 	margin-left: 40px;
 	background-color: #FFFFE9;
 	border-style: outset;
@@ -65,18 +65,18 @@ h3 {
 	font-size: 20px;
 	font-weight: bold;
 }
-#nume{
+#lastname{
 	margin-left: 26px;
 }
 
-.utilizator{
+.user{
 	color: navy;
 	margin-bottom: 30px;
 	margin-left: 50px;
 	font-size: 23px;
 	font-family: "Times New Roman";
 }
-.intrebarea-nr{
+.question-nr{
 	color: green;
 	font-weight: bold;
 	font-size: 30px;
@@ -84,7 +84,7 @@ h3 {
 	margin-left: 40px;
 	margin-bottom: 30px;
 }
-.variante{
+.options{
 	background-color: #FFFFE9;
 	margin-left: 40px;
 	border-style: outset;
