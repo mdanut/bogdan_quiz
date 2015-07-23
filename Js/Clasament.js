@@ -71,6 +71,7 @@ function adugareUtilizatorInMatrice(){
 }
 
 function preluareMatriceUtilizatori(){
+
 	var date=getCookieValueByKey('matriceUtilixatori');
 	var j=0;
 	nr=getCookieValueByKey('indexUtilizator');

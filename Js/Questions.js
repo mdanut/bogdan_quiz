@@ -1,16 +1,16 @@
 var nrIntrebari=10;
 
 $(document).ready(function(){
-    	var i=getCookieValueByKey('intrebareCurenta');
+    	var i=getCookieValueByKey(' intrebareCurenta');
     	i=parseInt(i);
     	
-        countdown(getCookieValueByKey('min'),getCookieValueByKey('sec'));
+        countdown(getCookieValueByKey('min'),getCookieValueByKey(' sec'));
     	getQuestionAndAnswers(i-1);
     	
-        if(getCookieValueByKey('rez'+i.toString()) == undefined){
+        if(getCookieValueByKey(' rez'+i.toString()) == undefined){
     		setCookieValue('rez'+i.toString(),'0,0,0,0,0');
     	} 
-   		reCheck(getCookieValueByKey('rez'+i.toString()));
+   		reCheck(getCookieValueByKey(' rez'+i.toString()));
    		
         $("button#prev").click(function(){
 			if(i>1){
@@ -46,7 +46,7 @@ $(document).ready(function(){
    		})
    		
 		/*----------------------------FOLOSESTE DOAR O FUNCTIE DE CLICK PENTRU TOATE CELE 5 BUTOANE RADIO--------------------------------*/
-        $('input:radio').click(function(){
+        $('input:radio#a').click(function(){
     		checkRadio(0);
     	})
     	

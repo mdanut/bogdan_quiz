@@ -21,7 +21,9 @@ function salveazaUtilizator(){
 }
 
 function salvareIndexUtilizator(){
+
 	i = getCookieValueByKey('indexUtilizator');
+
 	if (i == undefined){
 		i=0;
 		setCookieValue('indexUtilizator',i);
