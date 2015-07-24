@@ -19,9 +19,15 @@ $(document).ready(function(){
 function initializeUserMatrix(){
 	nr=getCookieValueByKey('indexUtilizator');
 	nr=parseInt(nr);
+	
 	dateUtilizator = new Array(nr+1);
 	for (var j = 0; j < dateUtilizator.length; j++) {
 		dateUtilizator[j] = new Array(3);
+	}
+
+	dateUtilizatorSortat = new Array(nr+1);
+	for (var j = 0; j < dateUtilizatorSortat.length; j++) {
+		dateUtilizatorSortat[j] = new Array(3);
 	}
 }
 
@@ -31,16 +37,21 @@ function afisareRezultat(){
 	var item;
 	var text = '';
 	nr=getCookieValueByKey('indexUtilizator'); 
-	
-	for (var i = 0; i <= nr ; i++){
+	sortUsers();
+
+	for (var i = 0; i <=nr ; i++){
     	item = $('<li>');
-    	text = dateUtilizator[i][0]+ ' ' + dateUtilizator[i][1] + '  '  + dateUtilizator [i][2]+ ' puncte';
+    	text = dateUtilizatorSortat[i][0]+ ' ' + dateUtilizatorSortat[i][1] + '  '  + dateUtilizatorSortat[i][2]+ ' puncte';
     	item.append(text);
-    	if( (i>0) && (dateUtilizator[i][2] >= dateUtilizator[i-1][2])){
-    		list.prepend(item);
-    	}else{
-    		list.append(item);
-    	}
+    	list.append(item);
+
+    	//for (var j = 0; j <= i; j++) {	
+    	//	if (dateUtilizatorSortat[i][2] >= dateUtilizator[i-j][2]) {
+    	//		list.prepend(item);
+    	//	}else{
+    	//		list.append(item);
+    	//	}
+    	//}
 	}
 	 $('div#rez').html(list);
  }
@@ -71,7 +82,6 @@ function adugareUtilizatorInMatrice(){
 }
 
 function preluareMatriceUtilizatori(){
-
 	var date=getCookieValueByKey('matriceUtilixatori');
 	var j=0;
 	nr=getCookieValueByKey('indexUtilizator');
@@ -93,5 +103,23 @@ function resetCookie(){
 	setCookieValue('intrebareCurenta','1');
 	for (var i = 1; i <= 10; i++) {
 		setCookieValue('rez'+i.toString(),'0,0,0,0,0');
+	}
+}
+
+function sortUsers(){
+	var pointsArray = new Array(dateUtilizator.length);
+	for (var i = 0; i < dateUtilizator.length; i++) {
+		pointsArray[i]  = dateUtilizator[i][2];
+	}
+	pointsArray.sort(function(a, b){return b-a});
+
+	for (var i = 0; i < pointsArray.length; i++) {
+		for (var j= 0; j < pointsArray.length; j++) {
+			if (pointsArray[i] == dateUtilizator[j][2]){
+				dateUtilizatorSortat[i][0] = dateUtilizator[j][0]
+				dateUtilizatorSortat[i][1] = dateUtilizator[j][1]
+				dateUtilizatorSortat[i][2] = dateUtilizator[j][2]
+			}
+		}
 	}
 }
