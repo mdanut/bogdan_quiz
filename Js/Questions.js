@@ -1,39 +1,39 @@
 var nrIntrebari=10;
 
 $(document).ready(function(){
-    	var i=getCookieValueByKey(' intrebareCurenta');
+    	var i=getCookieValueByKey("intrebareCurenta");
     	i=parseInt(i);
     	
-        countdown(getCookieValueByKey('min'),getCookieValueByKey(' sec'));
+        countdown(getCookieValueByKey("min"),getCookieValueByKey("sec"));
     	getQuestionAndAnswers(i-1);
     	
-        if(getCookieValueByKey(' rez'+i.toString()) == undefined){
-    		setCookieValue('rez'+i.toString(),'0,0,0,0,0');
+        if(getCookieValueByKey("rez"+i.toString()) == undefined){
+    		setCookieValue("rez"+i.toString(),"0,0,0,0,0");
     	} 
-   		reCheck(getCookieValueByKey(' rez'+i.toString()));
+   		reCheck(getCookieValueByKey("rez"+i.toString()));
    		
         $("button#prev").click(function(){
 			if(i>1){
-				setCookieValue('min',getMinutes());
-				setCookieValue('sec',getSeconds());
-				setCookieValue('rez'+i.toString(),getRez());
+				setCookieValue("min",getMinutes());
+				setCookieValue("sec",getSeconds());
+				setCookieValue("rez"+i.toString(),getRez());
 				i--;
-				setCookieValue('intrebareCurenta',i);
-				location.href='Intrebarea'+(i).toString()+'.html'
+				setCookieValue("intrebareCurenta",i);
+				location.href="Intrebarea"+(i).toString()+".html";
 			}else{
 				alert("Aceasta este prima intrebare");
 			}
    		})
     	
         $("button#next").click(function(){
-			setCookieValue('min',getMinutes());
-			setCookieValue('sec',getSeconds());
-			setCookieValue('rez'+i.toString(),getRez());
+			setCookieValue("min",getMinutes());
+			setCookieValue("sec",getSeconds());
+			setCookieValue("rez"+i.toString(),getRez());
 			
             if (i<10){
 				i++;
-				setCookieValue('intrebareCurenta',i)
-				location.href='Intrebarea'+(i).toString()+'.html';
+				setCookieValue("intrebareCurenta",i)
+				location.href="Intrebarea"+(i).toString()+".html";
 			}
             else{
 				alert("Aceasta este ultima intrebare");
@@ -41,12 +41,12 @@ $(document).ready(function(){
    		})
     	
         $("button#final").click(function(){
-            setCookieValue('rez'+i.toString(),getRez());
-			location.href='Rezultat.html';
+            setCookieValue("rez"+i.toString(),getRez());
+			location.href="Rezultat.html";
    		})
    		
 		/*----------------------------FOLOSESTE DOAR O FUNCTIE DE CLICK PENTRU TOATE CELE 5 BUTOANE RADIO--------------------------------*/
-        $('input:radio#a').click(function(){
+        $('input:radio').click(function(){
     		checkRadio(0);
     	})
     	

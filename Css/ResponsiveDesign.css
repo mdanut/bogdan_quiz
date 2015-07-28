@@ -79,6 +79,19 @@ h3 {
 	margin-left: 0.3%;
 }
 
+.error{
+	color: red;
+	margin-left: 1%;
+	font-size: 60%;
+	font-weight: bold;
+	border-width: 3px;
+	border-color: red;
+}
+.valid{
+	border-width: 3px;
+	border-color: lightgreen;
+}
+
 .user{
 	color: navy;
 	margin-bottom: 3%;
@@ -193,7 +206,18 @@ h3 {
 #firstname{
 	margin-left: 0.3%;
 }
-
+.error{
+	color: red;
+	margin-left: 1%;
+	font-size: 60%;
+	font-weight: bold;
+	border-width: 3px;
+	border-color: red;
+}
+.valid{
+	border-width: 3px;
+	border-color: lightgreen;
+}
 .user{
 	color: navy;
 	margin-bottom: 3%;
@@ -310,6 +334,18 @@ h3 {
 	margin-left: 0.3%;
 }
 
+.error{
+	color: red;
+	margin-left: 1%;
+	font-size: 60%;
+	font-weight: bold;
+	border-width: 3px;
+	border-color: red;
+}
+.valid{
+	border-width: 3px;
+	border-color: lightgreen;
+}
 .user{
 	color: navy;
 	margin-bottom: 3%;
@@ -426,6 +462,19 @@ h3 {
 	margin-left: 0.3%;
 }
 
+.error{
+	color: red;
+	margin-left: 1%;
+	font-size: 60%;
+	font-weight: bold;
+	border-width: 3px;
+	border-color: red;
+}
+.valid{
+	border-width: 3px;
+	border-color: lightgreen;
+}
+
 .user{
 	color: navy;
 	margin-bottom: 3%;
@@ -540,6 +589,19 @@ h3 {
 }
 #firstname{
 	margin-left: 0.3%;
+}
+
+.error{
+	color: red;
+	margin-left: 1%;
+	font-size: 60%;
+	font-weight: bold;
+	border-width: 3px;
+	border-color: red;
+}
+.valid{
+	border-width: 3px;
+	border-color: lightgreen;
 }
 
 .user{

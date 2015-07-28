@@ -33,7 +33,6 @@ function formareMatriceRaspunsuri(){
 
 	for (var i = 0; i < 10; i++) {
 		raspCurente = getCookieValueByKey('rez'+(i+1).toString());
-
 		if(raspCurente == undefined){
 			raspCurente="0,0,0,0,0";
 		}
