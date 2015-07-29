@@ -45,45 +45,24 @@ $(document).ready(function(){
 			location.href="Rezultat.html";
    		})
    		
-		/*----------------------------FOLOSESTE DOAR O FUNCTIE DE CLICK PENTRU TOATE CELE 5 BUTOANE RADIO--------------------------------*/
         $('input:radio').click(function(){
-    		checkRadio(0);
+            switch($(this).attr('id')){
+                case 'a' : checkRadio(0); break;
+                case 'b' : checkRadio(1); break;
+                case 'c' : checkRadio(2); break;
+                case 'd' : checkRadio(3); break;
+                case 'e' : checkRadio(4); break;
+            }
+        })
+       
+        $('input:checkbox').click(function(){
+            switch($(this).attr('id')){
+                case 'a' : checkCheckBox(0); break;
+                case 'b' : checkCheckBox(1); break;
+                case 'c' : checkCheckBox(2); break;
+                case 'd' : checkCheckBox(3); break;
+                case 'e' : checkCheckBox(4); break;
+            }
     	})
     	
-        $('input:radio#b').click(function(){
-    		checkRadio(1);
-    	})
-    	
-        $('input:radio#c').click(function(){
-    		checkRadio(2);
-    	})
-    	
-        $('input:radio#d').click(function(){
-    		checkRadio(3);
-    	})
-    	
-        $('input:radio#e').click(function(){
-    	   checkRadio(4);
-    	})
-    	
-		/*----------------------------FOLOSESTE DOAR O FUNCTIE DE CLICK PENTRU TOATE CELE 5 BUTOANE CHECK BOX--------------------------------*/
-        $('input:checkbox#a').click(function(){
-    		checkCheckBox(0);
-    	})
-    	
-        $('input:checkbox#b').click(function(){
-    		checkCheckBox(1);
-    	})
-    	
-        $('input:checkbox#c').click(function(){
-    		checkCheckBox(2);
-    	})
-    	
-        $('input:checkbox#d').click(function(){
-    		checkCheckBox(3);
-    	})
-    	
-        $('input:checkbox#e').click(function(){
-    		checkCheckBox(4);
-    	})
 });
