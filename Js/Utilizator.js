@@ -1,6 +1,7 @@
 
 var firstName;
 var lastName;
+var userEmail;
 var i;
 var formular;
 
@@ -16,8 +17,10 @@ $(document).ready(function(){
 function salveazaUtilizator(){
 	firstName = $("#firstname").val();
 	lastName = $("#lastname").val();
+	userEmail = $("#email").val();
 	setCookieValue("firstName",firstName);
 	setCookieValue("lastName",lastName);
+	setCookieValue("userEmail",userEmail);
 }
 
 function salvareIndexUtilizator(){
@@ -38,6 +41,7 @@ function resetCookie(){
 	setCookieValue("intrebareCurenta","1");
 	setCookieValue("firstName","");
 	setCookieValue("lastName","");
+	setCookieValue("userEmail","");
 	for (var i = 1; i <= 10; i++) {
 		setCookieValue("rez"+i.toString(),"0,0,0,0,0");
 	}
