@@ -1,0 +1,94 @@
+{
+  "data":[
+    [
+      "1",
+      "Choose the correct HTML element for the largest heading:",
+      "&lt;h6&gt;",
+      "&lt;h1&gt;",
+      "&lt;head&gt;",
+      "&lt;heading&gt;",
+      "&lt;&quot;heading&quot;&gt;"
+    ],
+    [
+      "2",
+      "Care din urmatoarele functii citeste intreg continutul unui fisier ?",
+      "file_get_contents() ",
+      "readfile()",
+      "file()",
+      "fgets()",
+      "fread()"
+    ],
+    [
+      "3",
+      "What is the correct HTML for making a checkbox ?",
+      "&lt;input type=&quot;check&quot;&gt;",
+      "&lt;check&gt;",
+      "&lt;input type=&quot;checkbox&quot;&gt;",
+      "&lt;checkbox&gt;",
+      "&lt;input &quot;checkbox&quot;&gt;"
+    ],
+    [
+      "4",
+      "Inside which HTML element do we put the JavaScript ?",
+      "&lt;js&gt;",
+      "&lt;script&gt;",
+      "&lt;javascript&gt;",
+      "&lt;scripting&gt;",
+      "&lt;&quot;javascript&quot;&gt;"
+    ],
+    [
+      "5",
+      "Where is the correct place to insert a JavaScript ?",
+      "The &lt;head&gt; section ",
+      "Both the &lt;head&gt; section and the &lt;body&gt; section are correct",
+      "The &lt;body&gt; section",
+      "JavaScript file can not be written in a html file",
+      "in the &lt;html&gt; section"
+    ],
+    [
+      "6",
+      "What is the correct JavaScript syntax to write &quot;Hello World&quot; ?",
+      "echo &quot;Hello World&quot;;",
+      "document.write(&quot;Hello World&quot;)",
+      "response.write(&quot;Hello World&quot;)",
+      "(&quot;Hello World&quot;)",
+      "echo.write(&quot;Hello World&quot;)"
+    ],
+    [
+      "7",
+      "Which of the following is not a type of constructor ? ",
+      "Copy constructor;",
+      "Friend constructor;",
+      "Default constructor",
+      "Parameterized constructor",
+      "None of the above"
+    ],
+    [
+      "8",
+      "How many instances of an abstract class can be created ?",
+      "7",
+      "14",
+      "Infinite",
+      "0",
+      "3"
+    ],
+    [
+      "9",
+      "Which of the following concepts provides facility of using object of one class inside another class ?",
+      "Encapsulation",
+      "Abstraction",
+      "Composition",
+      "Inheritance",
+      "None of the above"
+    ],
+    [
+      "10",
+      "What is correct about the static data member of a class ?",
+      "A static member function can access only static data members of a class",
+      "A static data member is shared among all the object of the class",
+      "A static data member can be accessed directly from main()",
+      "a b c are true",
+      "None of the above"
+    ]
+  ]
+}

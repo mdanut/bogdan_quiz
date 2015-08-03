@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  	<head>
+    	<title>Add Question</title>
+    	<meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <link rel="icon" href="favicon.ico">
+      <link href="../bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet">
+      <link href="../Css/main.css" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" href="../Css/tabledesign.css">
+	</head>
+ 	<body>
+		
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="AdminPage.html">Admin Page</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="../Main.html">Home Page</a></li>
+            <li class="active"><a href="#">Intrebare Noua</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+		
+    <div class="container">
+      <br/>
+      <form class="form-horizontal" role="form">
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="intrebare">Intrebare:</label>
+          <div class="col-sm-10">
+            <input type="text" name="intrebare" class="form-control" id="intrebare" >
+          </div>
+        </div>
+        <div class="form-group">
+         <label class="control-label col-sm-2" for="variantaA">Varianta A:</label>
+            <div class="col-sm-10"> 
+              <input type="text" name="variantaA" class="form-control" id="variantaA" >
+            </div>
+        </div>
+        <div class="form-group">
+         <label class="control-label col-sm-2" for="variantaB">Varianta B:</label>
+            <div class="col-sm-10"> 
+              <input type="text" name="variantaB" class="form-control" id="variantaB" >
+            </div>
+        </div>
+        <div class="form-group">
+         <label class="control-label col-sm-2" for="variantaC">Varianta C:</label>
+            <div class="col-sm-10"> 
+              <input type="text" name="variantaC" class="form-control" id="variantaC" >
+            </div>
+        </div>
+        <div class="form-group">
+         <label class="control-label col-sm-2" for="variantaD">Varianta D:</label>
+            <div class="col-sm-10"> 
+              <input type="text" name="variantaD" class="form-control" id="variantaD" >
+            </div>
+        </div>
+        <div class="form-group">
+         <label class="control-label col-sm-2" for="variantaE">Varianta E:</label>
+            <div class="col-sm-10"> 
+              <input type="text" name="variantaE" class="form-control" id="variantaE" >
+            </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="sel1">Nr rasp corecte:</label>
+            <select class=" col-sm-2 input-lg" id="sel1" >
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+        </div>
+        <div class="form-group">
+         <label class="control-label col-sm-2" for="variantaE">Varianta corecte:</label>
+            <div class="col-sm-6 "> 
+              <label class="control-label " for="aOk">A:</label>
+              <input type="checkbox" name="aOk" id="aOk">
+              <label class="control-label " for="bOk">B:</label>
+              <input type="checkbox" name="bOk" id="bOk">
+              <label class="control-label " for="cOk">C:</label>
+              <input type="checkbox" name="cOk" id="cOk">
+              <label class="control-label " for="dOk">D:</label>
+              <input type="checkbox" name="dOk" id="dOk">
+              <label class="control-label " for="eOk">E:</label>
+              <input type="checkbox" name="eOk" id="eOk">
+            </div>
+        </div>
+      <div class="form-group"> 
+        <div class="col-sm-offset-2 col-sm-10">
+          <button type="submit" class="btn btn-default">Add Question</button>
+        </div>
+      </div>
+    </form>
+	</div>
+
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.7/js/jquery.dataTables.min.js"></script>
+    <script src="../bootstrap-3.3.5/js/bootstrap.min.js"></script>
+    <script src="../bootstrap-3.3.5/assests/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="../Js/Admin.js"></script>
+	</body>
+</html> 

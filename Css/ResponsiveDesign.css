@@ -1,7 +1,7 @@
 @media only screen and (min-width: 1400px){
 
-body {
-    background-color:#A0F0E8;
+body{
+    background-color:#FFCC66;
     width: 90%;
 }
 h1 {
@@ -65,6 +65,13 @@ h3 {
 	font-weight: bold;
 	font-size: 17px;
 
+}
+
+#admin{
+	color: brown;
+	font-weight: bold;
+	font-size: 17px;
+	margin-left: 1%;
 }
 #final{
 	background: green;
@@ -134,7 +141,7 @@ h3 {
 @media only screen and (min-width: 950px ) and (max-width: 1399px){
 
 body {
-    background-color:#A0F0E8;
+    background-color:#FFCC66;
 }
 h1 {
     color: navy;
@@ -196,6 +203,14 @@ h3 {
 	color: red;
 	font-weight: bold;
 	font-size: 17px;
+
+}
+
+#admin{
+	color: brown;
+	font-weight: bold;
+	font-size: 17px;
+	margin-left: 1%;
 
 }
 #final{
@@ -266,7 +281,7 @@ h3 {
 @media only screen and (min-width: 660px) and (max-width: 950px){
 
 body {
-    background-color:#A0F0E8;
+    background-color:#FFCC66;
     width: 90%;
 }
 h1 {
@@ -330,6 +345,15 @@ h3 {
 	font-size: 17px;
 
 }
+
+#admin{
+	color: brown;
+	font-weight: bold;
+	font-size: 17px;
+	margin-left: 1%;
+
+}
+
 #final{
 	background: green;
 	color: red;
@@ -396,7 +420,7 @@ h3 {
 @media only screen and (min-width: 530px) and (max-width: 659px){
 
 body {
-    background-color:#A0F0E8;
+    background-color:#FFCC66;
 }
 h1 {
     color: navy;
@@ -455,6 +479,13 @@ h3 {
 }
 #prev{
 	color: red;
+	text-align: center;
+	font-weight: bold;
+	font-size: 17px;
+
+}
+#admin{
+	color: brown;
 	text-align: center;
 	font-weight: bold;
 	font-size: 17px;
@@ -526,7 +557,7 @@ h3 {
 @media only screen and (max-width: 529px){
 
 body {
-    background-color:#A0F0E8;
+    background-color:#FFCC66;
 }
 h1 {
     color: navy;
@@ -592,6 +623,15 @@ h3 {
 	font-size: 17px;
 
 }
+
+#admin{
+	margin-bottom: 2%;
+	color: brown;
+	text-align: center;
+	font-weight: bold;
+	font-size: 17px;
+
+}
 #final{
 	text-align: center;
 	background: green;
@@ -609,7 +649,7 @@ h3 {
 }
 #email{
 	margin-left: 4.6%;
-	margin-bottom: 1%
+	margin-bottom: 1%;
 }
 
 .error{

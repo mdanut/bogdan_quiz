@@ -9,8 +9,11 @@ $(document).ready(function(){
     resetCookie();
     formular=$("#userForm");
     formular.validate();
-    $("button").click(function(){
+    $("#next").click(function(){
 		userCheck();
+    });
+    $("#admin").click(function(){
+		adminCheck();
     });
 });
 
@@ -54,3 +57,11 @@ function userCheck() {
 		location.href='Html/Intrebarea1.html';
 	}
 }
+
+function adminCheck() {
+	if (formular.valid() == true ) {
+		salveazaUtilizator();
+		location.href='Html/AdminPage.html';
+	}
+}
+
