@@ -5,7 +5,8 @@ $(document).ready(function(){
     	i=parseInt(i);
     	
         countdown(getCookieValueByKey("min"),getCookieValueByKey("sec"));
-    	getQuestionAndAnswers(i-1);
+    	//getJson(i);
+        getQuestionAndAnswers(i-1);
     	
         if(getCookieValueByKey("rez"+i.toString()) == undefined){
     		setCookieValue("rez"+i.toString(),"0,0,0,0,0");
