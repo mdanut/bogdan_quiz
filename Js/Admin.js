@@ -1,6 +1,4 @@
-
-
-var editor; // use a global for the submit and return data rendering in the examples
+var editor;
  
 $(document).ready(function(){
     editor = new $.fn.dataTable.Editor( {

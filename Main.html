@@ -4,9 +4,7 @@
     	<title>Main page</title>
     	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>  
     	<link rel="stylesheet" type="text/css" href="Css/ResponsiveDesign.css">
-   		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
-		<script type="text/javascript" src="http://ajax.microsoft.com/ajax/jQuery.Validate/1.6/jQuery.Validate.min.js"></script>
-	 	<script type="text/javascript" src="http://jqueryvalidation.org/files/dist/additional-methods.min.js"></script> 
+    	<link rel="stylesheet" type="text/css" href="JqueryValidation/demo/site-demos.css">
 	</head>
   <body >
 	
@@ -17,19 +15,25 @@
 	</div>
 	
 	<form id="userForm" class="user">
-		<label for="lastname">Nume:</label>
-		<input type="text" name="lastname" id="lastname" required  pattern="[a-zA-Z]+" minlength="3" /><br>
-		<label for="firstname">Prenume:</label>
-		<input type="text" name="firstname" id="firstname" required pattern="[a-zA-Z]+" minlength="3" /><br>
-		<label for="email">Email:</label>
+		<label for="lastname" class="formLabels">Nume:</label>
+		<input type="text" name="lastname" id="lastname"  /><br>
+		<label for="firstname" class="formLabels">Prenume:</label>
+		<input type="text" name="firstname" id="firstname"   /><br>
+		<label for="email" class="formLabels" >Email:</label>
 		<input type="email" name="email" id="email" class="required email"  /><br>
 	</form>
+	
+	<div class="butoane"> 
+			<button id="next" >Start</button> 
+			<button id="admin">Admin</button>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="JqueryValidation/dist/jquery.validate.min.js"></script>
+	<script src="JqueryValidation/dist/additional-methods.min.js"></script> 
 	<script src="Js/cookies.js"></script>
 	<script src="Js/Json.js"></script>
 	<script src="Js/Utilizator.js"></script>
-	<div class="butoane"> 
-			<button id="next" >Start</button> 
+	
 
-			<button id="admin">Admin</button>
-	</div>
 </html> 
