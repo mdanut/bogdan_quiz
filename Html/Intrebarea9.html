@@ -4,7 +4,6 @@
     <title>Intrebarea9.</title>
 	<link rel="stylesheet" type="text/css" href="../Css/ResponsiveDesign.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-	<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.4.min.js"></script>
 </head>
   
 <body>
@@ -15,16 +14,12 @@
 	</div>
 
 	<div id="question">
+			<label id="question-id"></label>
 			<label id="question-label"></label>
 	</div>
 		<div class="options">
 			<h3>Alege raspunsul corect :</h3>	
-			<ol type="a">
-               <li><input type="radio" name="rasp1" id="a"/> <label id="varianta1"></label> </li>
-               <li><input type="radio" name="rasp1" id="b"/> <label id="varianta2"></label> </li>
-               <li><input type="radio" name="rasp1" id="c" /> <label id="varianta3"></label> </li>
-               <li><input type="radio" name="rasp1" id="d" /> <label id="varianta4"></label> </li>
-               <li><input type="radio" name="rasp1" id="e" /> <label id="varianta5"></label> </li> 
+			<ol type="a" id="varianteRaspuns">
             </ol>
         </div>  
 		
@@ -36,8 +31,8 @@
 		<button id="final">Termina Testul</button><br />
 
 	</div>
-
-	<script src="../Js/Json.js"></script>
+	
+	<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.4.min.js"></script>
 	<script src="../Js/ClientServerJquery.js"></script>
 	<script src="../Js/cookies.js"></script>
 	<script src="../Js/state.js"></script>

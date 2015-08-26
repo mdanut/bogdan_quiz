@@ -1,17 +1,23 @@
 var nrIntrebari=10;
+var table="";
+var i;
 
 $(document).ready(function(){
-    	var i=getCookieValueByKey("intrebareCurenta");
+    	
+        disableBack();
+
+        i=getCookieValueByKey("intrebareCurenta");
     	i=parseInt(i);
     	
         countdown(getCookieValueByKey("min"),getCookieValueByKey("sec"));
-    	//getJson(i);
-        getQuestionAndAnswers(i-1);
+    	
+        getJson(i-1);
     	
         if(getCookieValueByKey("rez"+i.toString()) == undefined){
     		setCookieValue("rez"+i.toString(),"0,0,0,0,0");
     	} 
-   		reCheck(getCookieValueByKey("rez"+i.toString()));
+   		
+        reCheck(getCookieValueByKey("rez"+i.toString()));
    		
         $("button#prev").click(function(){
 			if(i>1){
@@ -27,6 +33,7 @@ $(document).ready(function(){
    		})
     	
         $("button#next").click(function(){
+            
 			setCookieValue("min",getMinutes());
 			setCookieValue("sec",getSeconds());
 			setCookieValue("rez"+i.toString(),getRez());
@@ -44,26 +51,42 @@ $(document).ready(function(){
         $("button#final").click(function(){
             setCookieValue("rez"+i.toString(),getRez());
 			location.href="Rezultat.html";
+            setUsersStandings();
    		})
-   		
+            
+
         $('input:radio').click(function(){
             switch($(this).attr('id')){
-                case 'a' : checkRadio(0); break;
-                case 'b' : checkRadio(1); break;
-                case 'c' : checkRadio(2); break;
-                case 'd' : checkRadio(3); break;
-                case 'e' : checkRadio(4); break;
-            }
+                case 'inputVarianta1' : checkRadio(0); break;
+                case 'inputVarianta2' : checkRadio(1); break;
+                case 'inputVarianta3' : checkRadio(2); break;
+                case 'inputVarianta4' : checkRadio(3); break;
+                case 'inputVarianta5' : checkRadio(4); break;
+        }
         })
-       
+    
         $('input:checkbox').click(function(){
             switch($(this).attr('id')){
-                case 'a' : checkCheckBox(0); break;
-                case 'b' : checkCheckBox(1); break;
-                case 'c' : checkCheckBox(2); break;
-                case 'd' : checkCheckBox(3); break;
-                case 'e' : checkCheckBox(4); break;
+                case 'inputVarianta1' : checkCheckBox(0); break;
+                case 'inputVarianta2' : checkCheckBox(1); break;
+                case 'inputVarianta3' : checkCheckBox(2); break;
+                case 'inputVarianta4' : checkCheckBox(3); break;
+                case 'inputVarianta5' : checkCheckBox(4); break;
             }
-    	})
-    	
+        })
+    
+   		    	
 });
+
+   
+
+function disableBack(){
+    window.onload = window.history.forward();
+        window.onpageshow = function(evt) {
+             if (evt.persisted){
+                window.history.forward();
+             } 
+         }
+}
+
+        
