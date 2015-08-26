@@ -1,67 +1,15 @@
-var editor;
- 
-$(document).ready(function(){
-    editor = new $.fn.dataTable.Editor( {
-        ajax: "../Js/Intrebari.json",
-        table: "#example",
-        fields: [
-        	{
-                label: "Id:",
-                name: "id"
-            },
-        	{
-                label: "Intrebare:",
-                name: "intrebare"
-            },
-            {
-                label: "Varianta A:",
-                name: "varA"
-            },
-            {
-                label: "Varianta B:",
-               	name: "varB"
-            },
-            {
-                label: "Varianta C:",
-                name: "varC"
-            },
-            {
-                label: "Varianta D:",
-                name: "varD"
-            },
-            {
-                label: "Varianta E:",
-                name: "varE"
-            }
+$('#example').DataTable({
+       
+        "ajax": "http://172.30.0.141:8080/spring/JsonQuestions",
+        "columns": [
+            { "data": "id" },
+            { "data": "question" },
+            { "data": "A" },
+            { "data": "B" },
+            { "data": "C" },
+            { "data": "D" },
+            { "data": "E" }
         ]
-    });
 
-    $('#example').on( 'click', 'tbody td:not(:first-child)', function (e) {
-        editor.inline( this );
     });
- 
-    $('#example').DataTable({
-        dom: "Tfrtip",
-        ajax: "../Js/Intrebari.json",
-        columns: [
-        	{ data: "id"},
-            { data: "intrebare" },
-            { data: "varA" },
-            { data: "varB" },
-            { data: "varC" },
-            { data: "varD" },
-            { data: "varE"}
-        ],
-        tableTools: {
-            sRowSelect: "os",
-            sRowSelector: 'td:first-child',
-            aButtons: [
-                { sExtends: "editor_create", editor: editor },
-                { sExtends: "editor_edit",   editor: editor },
-                { sExtends: "editor_remove", editor: editor }
-            ]
-        }
-    });
-});
-
 

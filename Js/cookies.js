@@ -1,8 +1,8 @@
-document.cookie.Domain = null;
+//document.cookie.Domain = null;
 
 function setCookieValue(cname,cvalue) {
- 
-    document.cookie =cname+"="+cvalue;
+
+    document.cookie = cname+"="+cvalue+"; path=/quiz/Html/";
 
 }
 
