@@ -1,4 +1,3 @@
-
 var firstName;
 var lastName;
 var userEmail;
@@ -6,14 +5,19 @@ var i;
 var form;
 
 $(document).ready(function(){
-    resetCookie();
+    
+    disableBack();
     validateForm();
+    
     $("#next").click(function(){
+		resetCookie();
 		userCheck();
     });
+   
     $("#admin").click(function(){
 		adminCheck();
     });
+
 });
 
 function salveazaUtilizator(){
@@ -25,16 +29,6 @@ function salveazaUtilizator(){
 	setCookieValue("userEmail",userEmail);
 }
 
-function salvareIndexUtilizator(){
-	i = getCookieValueByKey("indexUtilizator");
-	if (i == undefined){
-		i=0;
-		setCookieValue("indexUtilizator",i);
-	}else{
-		i++;
-		setCookieValue("indexUtilizator",i);
-	}
-}
 
 function validateForm(){
 	
@@ -66,6 +60,7 @@ function validateForm(){
 }
 
 function resetCookie(){
+	
 	setCookieValue("min","15");
 	setCookieValue("sec","0");
 	setCookieValue("intrebareCurenta","1");
@@ -84,7 +79,6 @@ function userCheck() {
 	
 	if (form.valid() == true ) {
 		salveazaUtilizator();
-		salvareIndexUtilizator();
 		location.href='Html/Intrebarea1.html';
 	}
 }
@@ -99,3 +93,12 @@ function adminCheck() {
 	}
 }
 
+function disableBack(){
+   
+    window.onload = window.history.forward();
+        window.onpageshow = function(evt) {
+             if (evt.persisted){
+                window.history.forward();
+             } 
+         }
+}

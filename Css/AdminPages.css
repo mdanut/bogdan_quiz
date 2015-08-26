@@ -1,0 +1,13 @@
+body {
+  padding-top: 50px;
+  background-color:#FFCC66;
+  
+}
+
+.game_scene {
+  padding: 20px 15px;
+  text-align: center;
+  min-width:1024px;
+  min-height:720px;
+  background-color:#fefefe;
+}

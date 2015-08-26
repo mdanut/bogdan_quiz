@@ -2,6 +2,7 @@ var timp;
 var seconds;
 var minutes;
     function countdown(min,sec) {
+       
         seconds = parseInt(sec);
         minutes = parseInt(min);
 
